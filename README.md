@@ -29,12 +29,12 @@ http://cvbuild.epizy.com/
 
 <p align="center">
   <a href="http://cvbuild.epizy.com/">
-    <img width='85%' src="/github-imgs/home.png"/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <img width='85%' src="/github-imgs/home.JPG"/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
   </a>
   <a href="http://cvbuild.epizy.com/">
-    <img width='85%' src="/github-imgs/builder.png"/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <img width='85%' src="/github-imgs/builder.JPG"/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
   </a>
   <a href="http://cvbuild.epizy.com/">
-    <img width='85%' src="/github-imgs/cv.png"/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <img width='85%' src="/github-imgs/cv.JPG"/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
   </a>
 </p>
