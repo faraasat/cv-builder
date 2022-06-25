@@ -1,0 +1,116 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#login {
+  width: 100%;
+  min-height: 600px;
+  height: 100vh;
+  background-color: rgba(1, 1, 1, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#login-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#login-menu h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+#login-form {
+  background-color: rgba(255, 255, 255, 0.55);
+  padding: 25px 15px;
+  border-radius: 5px;
+}
+
+#login-form input {
+  margin-left: 8px;
+  padding: 3px 7px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid gray;
+}
+
+#login-button {
+  margin-top: 10px;
+  display: flex;
+  justify-content: end;
+}
+
+#login-button button {
+  padding: 5px 13px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#login-or {
+  font-size: 60px;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: cursive;
+  font-weight: bold;
+}
+
+#create-button {
+  margin-top: 10px;
+}
+
+#create-button a {
+  border: 2px solid white;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  background-color: transparent;
+  outline: none;
+  font-size: 20px;
+  padding: 11px 25px;
+  border-radius: 7px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.5s ease-in;
+}
+
+#create-button a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.stick {
+  font-size: 17px;
+  z-index: 200;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-25px, 25px);
+  background-color: rgb(255, 94, 94);
+  padding: 11px;
+  color: white;
+  border-radius: 6px;
+}

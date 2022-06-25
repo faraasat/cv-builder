@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type='text/javascript'>
+      sessionStorage.removeItem("user_data")
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>CV Builder</title>
+  </head>
+  <body>
+    <div id="cv">
+      <div id="cv-sub">
+        <h1 id="cv-head">CV Maker</h1>
+        <form>
+          <div class="cv-block">
+            <h2 class="accordion">Personal Details</h2>
+            <div class="panel" style="display: block">
+              <div class="cv-block__align">
+                <div class="cv-block__values">
+                  <table>
+                    <tr>
+                      <td><label for="name">Full Name</label></td>
+                      <td>
+                        <input
+                          type="text"
+                          name="name"
+                          id="name"
+                          placeholder="John Doe"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label for="phone">Phone Number</label></td>
+                      <td>
+                        <input
+                          type="number"
+                          name="phone"
+                          id="phone"
+                          placeholder="+921111111111"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label for="email">Email Address</label></td>
+                      <td>
+                        <input
+                          type="email"
+                          name="email"
+                          id="email"
+                          placeholder="email@example.com"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label>Gender</label></td>
+                      <td>
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="male"
+                          id="male"
+                          checked
+                        />
+                        <label for="male">Male</label>
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="female"
+                          id="female"
+                        />
+                        <label for="female">Female</label>
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="others"
+                          id="others"
+                        />
+                        <label for="others">Others</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label for="dob">Date of Birth</label></td>
+                      <td>
+                        <input type="date" name="dob" id="dob" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label for="add">Address</label></td>
+                      <td>
+                        <input
+                          type="text"
+                          name="add"
+                          id="add"
+                          placeholder="HNo. Street, City, Country"
+                        />
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="cv-block__pic" id="pers-pic">
+                  <label>
+                    <img src="../../static/icons/camera.svg" alt="Camera" />
+                    <input id="input-pic" type="file" />
+                    <span id="input-pic__text">Select Image</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cv-block">
+            <h2 class="accordion">Work Details</h2>
+            <div class="panel" style="display: none">
+              <div
+                class="cv-block__align cv-details__override"
+                id="work-placeholder"
+              >
+                <div class="cv-details__values">
+                  <div class="cv-block__values">
+                    <table>
+                      <tr>
+                        <td><label for="cp-name">Company Name</label></td>
+                        <td>
+                          <input
+                            type="text"
+                            name="cp-name"
+                            id="cp-name"
+                            placeholder="Microsoft"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><label for="cd">Current Designation</label></td>
+                        <td>
+                          <input
+                            type="text"
+                            name="cd"
+                            id="cd"
+                            placeholder="Software Engineer"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="tye">Total Years of Experience</label>
+                        </td>
+                        <td>
+                          <input
+                            type="number"
+                            name="tye"
+                            id="tye"
+                            placeholder="2"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="dwe">Details of Work Experience</label>
+                        </td>
+                        <td>
+                          <textarea name="dwe" id="dwe" rows="4"></textarea>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="cv-icons">
+                    <button
+                      class="cv-icons__icon"
+                      onclick="clearWorkDetails(event, '')"
+                    >
+                      <img src="../../static/icons/erase.svg" alt="clear" />&nbsp;Clear
+                    </button>
+                    <button class="cv-icons__icon" disabled>
+                      <img src="../../static/icons/trash.svg" alt="delete" />&nbsp;Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="cv-button__add" onclick="addWorkDetailForm(event)">
+                <button>
+                  <img src="../../static/icons/plus1.svg" alt="add" />&nbsp;Add
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="cv-block">
+            <h2 class="accordion">Education Details</h2>
+            <div class="panel" style="display: none">
+              <div
+                class="cv-block__align cv-details__override"
+                id="edu-placeholder"
+              >
+                <div class="cv-details__values">
+                  <div class="cv-block__values cv-edu__override">
+                    <table>
+                      <tr>
+                        <td><label for="dp">Degree Program</label></td>
+                        <td>
+                          <input
+                            type="text"
+                            name="dp"
+                            id="dp"
+                            placeholder="Bachelor's of Computer"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><label for="dy">Degree Year</label></td>
+                        <td>
+                          <input
+                            type="number"
+                            name="dy"
+                            id="dy"
+                            placeholder="2022"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="om">Obtained Marks</label>
+                        </td>
+                        <td>
+                          <input
+                            type="number"
+                            name="om"
+                            id="om"
+                            placeholder="89"
+                          />
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="cv-icons">
+                    <button
+                      class="cv-icons__icon"
+                      onclick="clearEduDetails(event, '')"
+                    >
+                      <img src="../../static/icons/erase.svg" alt="clear" />&nbsp;Clear
+                    </button>
+                    <button class="cv-icons__icon" disabled>
+                      <img src="../../static/icons/trash.svg" alt="delete" />&nbsp;Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="cv-button__add" onclick="addEduDetailForm(event)">
+                <button>
+                  <img src="../../static/icons/plus1.svg" alt="add" />&nbsp;Add
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="cv-auth"">
+            <table>
+              <tr>
+                <td><label for="username">Username:</label></td>
+                <td><input type="text" name="username" id="username" /></td>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" name="password" id="password" /></td>
+              </tr>
+            </table>
+          </div>
+          <div class="cv-button__submit" onclick="submitCv(event)">
+            <button>
+              <img src="../../static/icons/submit.svg" alt="submit" />&nbsp;Create Your CV
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="stick" style="display: none"></div>
+    <button id="go-home" onclick="goHome()">Home</button>
+    <script src="./app.js"></script>
+  </body>
+</html>
